@@ -53,13 +53,13 @@ Settings are saved and stored securely.
 ## 🏗️ How It Works
 
 User Input
-↓
+->
 Subject Information
-↓
+->
 Priority Calculation Algorithm
-↓
+->
 Study Time Allocation
-↓
+->
 Personalized Study Plan
 
 
