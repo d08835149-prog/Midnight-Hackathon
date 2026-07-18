@@ -5,6 +5,8 @@ import { calculateStudyPlan } from "../algorithms/calculateStudyPlan";
 
 function AddSubject() {
 
+  
+
 
   
   // -----------------------------
@@ -82,6 +84,15 @@ function AddSubject() {
   // -----------------------------
 
   async function addSubject() {
+
+        if (!subject.name.trim()) {
+      alert("Please enter a subject name");
+      return;
+    }
+
+
+
+
     const { error } = await supabase.from("subjects").insert({
       name: subject.name,
       difficulty: subject.difficulty,
@@ -337,6 +348,91 @@ function AddSubject() {
       <h2 className="text-2xl font-bold mt-8 mb-4">
         Study Settings
       </h2>
+      
+      <label className="block mb-1 font-medium">
+        Daily Study Time (minutes)
+      </label>
+
+      <input
+        className="border rounded-lg p-2 w-full mb-3"
+        type="number"
+        placeholder="Daily Study Time"
+        value={settings.dailyMinutes}
+        onChange={(e) =>
+          setSettings({
+            ...settings,
+            dailyMinutes: Number(e.target.value),
+          })
+        }
+      />
+
+    <label className="block mb-1 font-medium">
+      Maximum Focus Session (minutes)
+    </label>
+
+    <input
+      className="border rounded-lg p-2 w-full mb-3"
+      type="number"
+      placeholder="Maximum Focus Session"
+      value={settings.maxSessionMinutes}
+      onChange={(e) =>
+        setSettings({
+          ...settings,
+          maxSessionMinutes: Number(e.target.value),
+        })
+      }
+    />
+
+    
+
+    <label className="block mb-1 font-medium">
+      Break Time (minutes)
+    </label>
+
+    <input
+      className="border rounded-lg p-2 w-full mb-3"
+      type="number"
+      placeholder="Break Minutes"
+      value={settings.breakMinutes}
+      onChange={(e) =>
+        setSettings({
+          ...settings,
+          breakMinutes: Number(e.target.value),
+        })
+      }
+    />
+
+    <label className="block mb-1 font-medium">
+      Main Goal
+    </label>
+
+    <select
+      className="border rounded-lg p-2 w-full mb-4"
+      value={settings.mainGoal}
+      onChange={(e)=>
+        setSettings({
+          ...settings,
+           mainGoal:e.target.value
+        })
+      }
+    >
+    <option>
+      Improve Grades
+    </option>
+
+    <option>
+     Exam Preparation
+    </option>
+
+    <option>
+      Understand Concepts
+    </option>
+
+    <option>
+      Build Study Habit
+    </option>
+
+  </select>
 
             <button
         className="bg-green-600 text-white px-4 py-2 rounded-lg w-full"
