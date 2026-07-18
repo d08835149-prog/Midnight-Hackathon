@@ -1,75 +1,136 @@
-# React + TypeScript + Vite
+# 🚀 StudySpark
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Plan your study. Study smarter, not harder.
 
-Currently, two official plugins are available:
+StudySpark is a personalized study planning web application that helps students decide what to study first by analyzing subjects based on difficulty, confidence level, goals, and exam urgency.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Instead of creating a simple timetable, StudySpark generates a priority-based study plan that adapts to each student's situation.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 📚 Subject Management
+- Add and manage subjects
+- Set difficulty levels
+- Set confidence levels
+- Add exam dates
+- Define study goals
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🧠 Smart Priority Algorithm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+StudySpark calculates a priority score for each subject using:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Exam urgency
+- Subject difficulty
+- Confidence level
+- Learning goal
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Subjects with higher priority scores receive more study time.
 
-```
+### 📅 Personalized Study Plan
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Based on the user's available study time, StudySpark creates a plan containing:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Total study time
+- Active learning time
+- Review time
+- Organization time
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### ⚙️ Study Settings
 
-```
+Users can customize:
+
+- Daily study time
+- Maximum focus session length
+- Break duration
+- Main learning goal
+
+Settings are saved and stored securely.
+
+---
+
+## 🏗️ How It Works
+
+User Input
+↓
+Subject Information
+↓
+Priority Calculation Algorithm
+↓
+Study Time Allocation
+↓
+Personalized Study Plan
+
+
+
+The algorithm analyzes each subject and distributes the user's available study time based on priority.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+### Backend / Database
+- Supabase
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+src
+├── algorithms
+│ ├── calculatePriority.ts
+│ ├── calculateStudyPlan.ts
+│ └── calculateStudyRatio.ts
+│
+|
+├── lib
+│ └── supabase.ts
+│
+├── pages
+│ ├── Home.tsx
+│ └── AddSubject.tsx
+│
+└── types
+  └── Subject.ts
+
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/d08835149-prog/Midnight-Hackathon.git
+
+
+### 2. Install dependencies
+npm install
+
+
+### 3. Run the development server
+npm run dev
+
+🔮 Future Improvements
+
+Possible future features:
+
+User authentication
+Individual user accounts
+Study history tracking
+Progress analytics dashboard
+AI-powered study recommendations
+Calendar integration
+Mobile application
+
+
