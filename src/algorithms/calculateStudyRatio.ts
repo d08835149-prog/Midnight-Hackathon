@@ -23,7 +23,7 @@ export function calculateStudyRatio(subject: Subject) {
   );
 
 
-  // 시험 임박
+  // Exam is approaching
   if (daysLeft <= 2) {
 
     return {
@@ -35,7 +35,7 @@ export function calculateStudyRatio(subject: Subject) {
   }
 
 
-  // 3~7일 전
+  // 3-7 days before exam
   if (daysLeft <= 7) {
 
     return {
@@ -47,7 +47,7 @@ export function calculateStudyRatio(subject: Subject) {
   }
 
 
-  // 8~14일 전
+  // 8-14 days before exam
   if (daysLeft <= 14) {
 
     return {
@@ -59,7 +59,7 @@ export function calculateStudyRatio(subject: Subject) {
   }
 
 
-  // 장기 준비
+  // Long-term preparation
   return {
     study: 70,
     review: 15,
