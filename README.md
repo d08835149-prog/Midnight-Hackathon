@@ -123,7 +123,7 @@ npm run dev
 
 🔮 Future Improvements
 
-Possible future features:
+## Possible future features:
 
 User authentication
 Individual user accounts
