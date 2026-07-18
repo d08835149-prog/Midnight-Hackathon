@@ -1,34 +1,4 @@
-import { calculateStudyPlan } from "../algorithms/calculateStudyPlan";
-import type { Subject } from "../types/Subject";
-
-
 function Home() {
-
-
-  const testSubjects: Subject[] = [
-    {
-      id: 1,
-      name: "Physics",
-      difficulty: "Hard",
-      examDate: "2026-07-20",
-      confidence: 2,
-      goal: "Exam",
-    },
-
-    {
-      id: 2,
-      name: "Math",
-      difficulty: "Medium",
-      examDate: "2026-08-10",
-      confidence: 4,
-      goal: "Review",
-    }
-  ];
-
-
- 
-
-
 
   return (
     <div className="min-h-screen flex items-center justify-center">
