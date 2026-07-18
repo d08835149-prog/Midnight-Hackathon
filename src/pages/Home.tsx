@@ -4,7 +4,6 @@ import type { Subject } from "../types/Subject";
 
 function Home() {
 
-  console.log("HOME RUNNING");
 
   const testSubjects: Subject[] = [
     {
@@ -27,14 +26,7 @@ function Home() {
   ];
 
 
-  console.log(
-    calculateStudyPlan(
-      testSubjects,
-      120
-    )
-  );
-
-
+ 
 
 
 
