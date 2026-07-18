@@ -106,6 +106,44 @@ src
 
 ---
 
+🔮 Future Improvements
+
+Possible future features:
+
+-User authentication
+-Individual user accounts
+-Study history tracking
+-Progress analytics dashboard
+-AI-powered study recommendations
+-Calendar integration
+-Mobile application
+
+---
+
+🎯 Motivation
+
+Many students struggle with deciding what to study first.
+StudySpark aims to reduce decision fatigue by automatically prioritizing tasks and creating a smarter study routine.
+
+---
+
+## 🙌 Credits
+
+Built by:
+- Ditto(Minjae) A.(d08835149-prog)
+
+Contributors:
+- Adrian A. - Testing and feedback
+
+Special thanks to:
+- Supabase
+- Vercel
+- React community
+
+Built for the Midnight Hackathon.
+
+
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
