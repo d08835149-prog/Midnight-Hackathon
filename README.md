@@ -82,27 +82,6 @@ The algorithm analyzes each subject and distributes the user's available study t
 ### Deployment
 - Vercel
 
----
-
-## 📂 Project Structure
-
-src
-├── algorithms
-│ ├── calculatePriority.ts
-│ ├── calculateStudyPlan.ts
-│ └── calculateStudyRatio.ts
-│
-|
-├── lib
-│ └── supabase.ts
-│
-├── pages
-│ ├── Home.tsx
-│ └── AddSubject.tsx
-│
-└── types
-  └── Subject.ts
-
 
 ---
 
