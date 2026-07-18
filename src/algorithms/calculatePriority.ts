@@ -108,16 +108,16 @@ export function calculatePriority(subject: Subject) {
 
   let score = 0;
 
-  // 시험 긴급도 (최우선)
+  // Exam urgency (highest priority)
   score += calculateExamUrgency(subject) * 2;
 
-  // 난이도
+  // Difficulty level
   score += calculateDifficultyScore(subject);
 
-  // 자신감
+  // Confidence level
   score += calculateConfidenceScore(subject);
 
-  // 목표
+  // Learning goal
   score += calculateGoalScore(subject) * 0.5;
 
 
