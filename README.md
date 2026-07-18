@@ -138,16 +138,3 @@ npm install
 ### 3. Run the development server
 npm run dev
 
-🔮 Future Improvements
-
-## Possible future features:
-
-User authentication
-Individual user accounts
-Study history tracking
-Progress analytics dashboard
-AI-powered study recommendations
-Calendar integration
-Mobile application
-
-
