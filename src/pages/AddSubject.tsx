@@ -166,7 +166,14 @@ function AddSubject() {
       });
     }
 
-    loadSettings();
+    await loadSettings();
+
+    setSavedSettings({
+    daily_minutes: settings.dailyMinutes,
+    max_session_minutes: settings.maxSessionMinutes,
+    break_minutes: settings.breakMinutes,
+    main_goal: settings.mainGoal,
+    });
   }
 
   // -----------------------------
